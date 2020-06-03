@@ -15,13 +15,38 @@ UpdateStatus()
 return
  
 ; Leap mode mappings
+#MenuMaskKey vk07  ; vk07 is unassigned.
 #If IsCapsLockOn()
+; Char move
 *i::Up
 *k::Down
 *j::Left
 *l::Right
-*u::Home
-*o::End
+
+; Home/End
+^+u::Send +{Home}
+^+o::Send +{End}
+^u::Send {Home}
+^o::Send {End}
++u::Send +{Home}
++o::Send +{End}
+u::Send {Home}
+o::Send {End}
+
+; Page (can be mapped to paragraph with Block Travel extension)
+^i::Send {PgUp}
+^k::Send {PgDn}
+[::Send {PgUp}
+]::Send {PgDn}
++[::Send +{PgUp}
++]::Send +{PgDn}
+
+; Document
+^[::Send ^{Home}
+^]::Send ^{End}
+^+[::Send ^+{Home}
+^+]::Send ^+{End}
+
 
 ; All time mappings
 #If 
@@ -45,8 +70,8 @@ UpdateStatus()
 	Sleep, 10
 	if IsCapsLockOn()
 	{
-		Progress, B W100 ZH0 FS8 x%width% y%height% CW5FF9D4 CT000000, LEAP MODE, , LeapStatus
-	}
+		Progress, B W120 ZH0 FS8 x%width% y%height% CW5FF9D4 CT000000, LEAP MODE, , LeapStatus
+	}		
 	else
 	{
 		Progress, off
