@@ -33,9 +33,13 @@ return
 u::Send {Home}
 o::Send {End}
 
-; Page (can be mapped to paragraph with Block Travel extension)
-^i::Send {PgUp}
-^k::Send {PgDn}
+; Block travel (requires Block Travel extension)
+^i::Send ^!{PgUp}
+^k::Send ^!{PgDn}
+^+i::Send ^!+{PgUp}
+^+k::Send ^!+{PgDn}
+
+; Page 
 [::Send {PgUp}
 ]::Send {PgDn}
 +[::Send +{PgUp}
