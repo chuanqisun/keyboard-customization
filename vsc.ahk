@@ -14,14 +14,19 @@ UpdateStatus()
 UpdateStatus()
 return
  
-; Handle arrowkey mappings
+; Leap mode mappings
 #If IsCapsLockOn()
 *i::Up
 *k::Down
 *j::Left
 *l::Right
-#If
+*u::Home
+*o::End
 
+; All time mappings
+#If 
++Backspace::Send {Del}
+^+Backspace::Send ^{Del}
 
 ;======================
 ;FUNCTIONS
