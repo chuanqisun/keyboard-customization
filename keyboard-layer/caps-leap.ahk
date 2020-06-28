@@ -33,6 +33,10 @@ return
 
 ~*CapsLock up::UpdateStatus()
 
+; Shift + backspace => delete
++Backspace::Send {Del}
+^+Backspace::Send ^{Del}
+
 ; System-wide leap mode mappings
 #If isOn
 *i::Up
