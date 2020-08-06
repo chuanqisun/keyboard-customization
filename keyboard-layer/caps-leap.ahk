@@ -38,13 +38,15 @@ return
 
 ; System-wide leap mode mappings
 #If isOn
+  
 *i::Up
 *k::Down
 *j::Left
 *l::Right
 
 ; Tab->Ctrl for ergonomics
-*Tab::Ctrl
+Tab & j::^Left
+Tab & l::^Right
 
 ; Line start/end
 *o::End
