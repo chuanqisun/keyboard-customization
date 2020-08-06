@@ -24,11 +24,10 @@ SetTitleMatchMode, 2
 ; Ctrl + Alt + CapsLock to use Capslock
 !^CapsLock::CapsLock
 
-
 ; Usa Capslock to toggle mode 
 ~*CapsLock::
   UpdateStatus()
-	KeyWait, CapsLock
+  KeyWait, CapsLock
 return
 
 ~*CapsLock up::UpdateStatus()
@@ -44,6 +43,9 @@ return
 *j::Left
 *l::Right
 
+; Tab->Ctrl for ergonomics
+*Tab::Ctrl
+
 ; Line start/end
 *o::End
 *u::Home
@@ -58,24 +60,24 @@ return
 
 IsCapsLockOn()
 {
-	return GetKeyState("CapsLocK", "P") = 1
+return GetKeyState("CapsLocK", "P") = 1
 }
 
 UpdateStatus()
 {
-	global width
-	global height
-	global isOn
-
-	if (IsCapsLockOn())
-	{
-		Progress, B W120 ZH0 FS8 x%width% y%height% CW5FF9D4 CT000000, LEAP MODE
-		isOn := True
-	}		
-	else if (!IsCapsLockOn())
-	{
-		Progress, off
-		isOn := False
-	}
-	return
+  global width
+  global height
+  global isOn
+  
+  if (IsCapsLockOn())
+  {
+    Progress, B W120 ZH0 FS8 x%width% y%height% CW5FF9D4 CT000000, LEAP MODE
+    isOn := True
+  }		
+  else if (!IsCapsLockOn())
+  {
+    Progress, off
+    isOn := False
+  }
+return
 }
