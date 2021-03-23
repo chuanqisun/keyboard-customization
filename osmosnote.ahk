@@ -1,1 +1,1 @@
-^+2::Run, msedge.exe "http://localhost:2077"
+^+Space::Run, msedge.exe "http://localhost:2077"
