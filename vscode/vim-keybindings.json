@@ -52,12 +52,8 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+w q",
-    "command": "workbench.action.closeActiveEditor"
-  },
-  {
     "key": "ctrl+w ctrl+w",
-    "command": "workbench.action.focusNextGroup"
+    "command": "workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+w l",
