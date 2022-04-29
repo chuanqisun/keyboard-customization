@@ -52,7 +52,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+q",
+    "key": "ctrl+k ctrl+k",
     "command": "workbench.action.closeActiveEditor"
   },
   {
@@ -72,6 +72,10 @@
     "key": "ctrl+h",
     "command": "workbench.action.previousEditorInGroup",
     "when": "editorFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w ctrl+w",
+    "command": "workbench.action.focusNextGroup"
   },
   {
     "key": "ctrl+w l",
