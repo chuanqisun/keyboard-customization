@@ -58,12 +58,12 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.nextEditorInGroup",
-    "when": "editorFocus && vim.mode == 'Normal'"
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+h",
     "command": "workbench.action.previousEditorInGroup",
-    "when": "editorFocus && vim.mode == 'Normal'"
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+w ctrl+w",
@@ -90,6 +90,6 @@
   {
     "key": "/",
     "command": "actions.find",
-    "when": "editorFocus || editorIsOpen"
+    "when": "vim.mode == 'Normal'"
   }
 ]
