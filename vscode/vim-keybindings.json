@@ -66,11 +66,26 @@
   {
     "key": "tab",
     "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
+    "when": "editorFocus && vim.mode == 'Normal'"
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
+    "when": "editorFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "/",
+    "command": "actions.find",
+    "when": "editorFocus || editorIsOpen"
   }
 ]
