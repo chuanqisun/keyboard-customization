@@ -65,12 +65,12 @@
   },
   {
     "key": "tab",
-    "command": "workbench.action.nextEditor",
+    "command": "workbench.action.nextEditorInGroup",
     "when": "vim.mode == 'Normal'"
   },
   {
     "key": "shift+tab",
-    "command": "workbench.action.previousEditor",
+    "command": "workbench.action.previousEditorInGroup",
     "when": "vim.mode == 'Normal'"
   }
 ]
