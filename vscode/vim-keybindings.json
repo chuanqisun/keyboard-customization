@@ -33,10 +33,6 @@
     "command": "workbench.action.files.saveFiles"
   },
   {
-    "key": "ctrl+k ctrl+w",
-    "command": "workbench.action.closeOtherEditors"
-  },
-  {
     "key": "ctrl+d",
     "command": "-extension.vim_ctrl+d",
     "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
@@ -52,16 +48,12 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
+    "key": "ctrl+k k",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
     "key": "ctrl+k ctrl+k",
     "command": "workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "ctrl+w l",
-    "command": "workbench.action.focusNextGroup"
-  },
-  {
-    "key": "ctrl+w h",
-    "command": "workbench.action.focusPreviousGroup"
   },
   {
     "key": "ctrl+l",
@@ -76,6 +68,14 @@
   {
     "key": "ctrl+w ctrl+w",
     "command": "workbench.action.focusNextGroup"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusNextGroup"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusPreviousGroup"
   },
   {
     "key": "ctrl+w l",
