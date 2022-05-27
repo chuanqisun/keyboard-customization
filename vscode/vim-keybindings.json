@@ -52,10 +52,6 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor"
-  },
-  {
     "key": "ctrl+l",
     "command": "workbench.action.nextEditorInGroup",
     "when": "editorFocus"
