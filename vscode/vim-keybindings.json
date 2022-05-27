@@ -48,15 +48,11 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+k k",
+    "key": "ctrl+k ctrl+k",
     "command": "workbench.action.closeOtherEditors"
   },
   {
     "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "ctrl+k ctrl+k",
     "command": "workbench.action.closeActiveEditor"
   },
   {
@@ -70,30 +66,21 @@
     "when": "editorFocus"
   },
   {
-    "key": "ctrl+w ctrl+w",
+    "key": "ctrl+shift+l",
     "command": "workbench.action.focusNextGroup"
   },
   {
-    "key": "ctrl+w l",
-    "command": "workbench.action.focusNextGroup"
-  },
-  {
-    "key": "ctrl+w h",
+    "key": "ctrl+shift+h",
     "command": "workbench.action.focusPreviousGroup"
   },
   {
-    "key": "ctrl+w l",
+    "key": "ctrl+shift+l",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "ctrl+w h",
+    "key": "ctrl+shift+h",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "/",
-    "command": "actions.find",
-    "when": "vim.mode == 'Normal'"
   }
 ]
