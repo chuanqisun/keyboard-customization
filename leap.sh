@@ -1,3 +1,6 @@
+# This file can be loaded via leap.desktop file
+# TODO: figure out how to get xmodmap ~/.Xmodmap execute on startup for Pop OS
+
 # Right Alt as Mode switch
 xmodmap -e "keycode 108 = Mode_switch" 
 
