@@ -660,7 +660,12 @@
                   "modifierMask": 2
                 },
                 null,
-                null,
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 45,
+                  "modifierMask": 2
+                },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
