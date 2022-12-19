@@ -1,0 +1,2 @@
+- Place into `C:\Users\USER_NAME\AppData\Local\Frontier Developments\Elite Dangerous\Options`
+- Captured for Elite Dangerous Horizon
