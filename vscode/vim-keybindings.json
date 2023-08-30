@@ -11,6 +11,16 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "alt+l",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+h",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "key": "shift+alt+k",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
@@ -33,11 +43,6 @@
     "command": "workbench.action.files.saveFiles"
   },
   {
-    "key": "ctrl+d",
-    "command": "-extension.vim_ctrl+d",
-    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
-  },
-  {
     "key": "ctrl+n",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
@@ -52,21 +57,11 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+alt+l",
     "command": "workbench.action.focusNextGroup"
   },
   {
-    "key": "ctrl+shift+h",
+    "key": "ctrl+alt+h",
     "command": "workbench.action.focusPreviousGroup"
   },
   {
@@ -82,12 +77,12 @@
   {
     "key": "ctrl+n",
     "when": "codeActionMenuVisible",
-    "command": "selectPrevCodeAction"
+    "command": "selectNextCodeAction"
   },
   {
     "key": "ctrl+p",
     "when": "codeActionMenuVisible",
-    "command": "selectNextCodeAction"
+    "command": "selectPrevCodeAction"
   },
   {
     "key": "ctrl+n",
@@ -98,5 +93,107 @@
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "shift+8",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
+  },
+  {
+    "key": "ctrl+shift+8",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "scrollPageDown",
+    "when": "textInputFocus && vim.active"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "scrollPageUp",
+    "when": "textInputFocus && vim.active"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "ctrl+shift+pageup",
+    "command": "-workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+shift+pagedown",
+    "command": "-workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.previousEditor",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextEditor",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+\\",
+    "command": "editor.action.inlineSuggest.hide",
+    "when": "inlineSuggestionVisible"
+  },
+  {
+    "key": "ctrl+alt+\\",
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-redo"
   }
 ]
