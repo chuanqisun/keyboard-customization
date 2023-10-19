@@ -1,0 +1,65 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+l",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+h",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveFiles"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.previousEditor",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextEditor",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.action.closeEditorsInOtherGroups", "workbench.action.closeOtherEditors"]
+    }
+  },
+  {
+    "key": "escape",
+    "command": "vscode-neovim.escape",
+    "when": "editorTextFocus && !inlineSuggestionVisible && neovim.init && neovim.mode != 'normal'"
+  },
+  {
+    "key": "escape",
+    "command": "-vscode-neovim.escape",
+    "when": "editorTextFocus && neovim.init && neovim.mode != 'normal'"
+  }
+]
+
