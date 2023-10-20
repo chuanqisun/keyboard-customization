@@ -52,14 +52,17 @@
     }
   },
   {
-    "key": "escape",
-    "command": "vscode-neovim.escape",
-    "when": "editorTextFocus && !inlineSuggestionVisible && neovim.init && neovim.mode != 'normal'"
+    "key": "ctrl+w q",
+    "command": "-workbench.action.closeActiveEditor",
+    "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus"
   },
   {
-    "key": "escape",
-    "command": "-vscode-neovim.escape",
-    "when": "editorTextFocus && neovim.init && neovim.mode != 'normal'"
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  },
+  {
+    "key": "ctrl+8",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus && neovim.mode == 'insert'"
   }
 ]
-
