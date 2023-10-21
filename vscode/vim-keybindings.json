@@ -75,6 +75,16 @@
     "command": "workbench.action.navigateUp",
     "when": "!editorTextFocus && vim.active && vim.use<C-w>"
   },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.view.explorer",
+    "when": "!editorIsOpen"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "terminal.focus",
+    "when": "!editorIsOpen"
+  },
 
   /**
    * Menu navigation
