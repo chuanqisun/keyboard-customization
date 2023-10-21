@@ -6,6 +6,10 @@
     "key": "ctrl+shift+s",
     "command": "workbench.action.files.saveFiles"
   },
+
+  /**
+   * Code navigation
+   */
   {
     "key": "ctrl+f",
     "command": "-extension.vim_ctrl+f",
