@@ -1,46 +1,87 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+l",
-    "command": "editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+h",
-    "command": "editor.action.outdentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+o",
-    "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "workbench.action.navigateForward"
-  },
+  /**
+   * Global command
+   */
   {
     "key": "ctrl+shift+s",
     "command": "workbench.action.files.saveFiles"
+  },
+
+  /**
+   * Window management
+   */
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.action.closeEditorsInOtherGroups", "workbench.action.closeOtherEditors"]
+    }
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "!panelFocus"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+    "when": "!panelFocus"
+  },
+  {
+    "key": "ctrl+w q",
+    "command": "workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && vim.use<C-w>"
+  },
+  {
+    "key": "ctrl+w q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl && !terminalFocus && !activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+w q",
+    "command": "runCommands",
+    "when": "terminalFocus && vim.use<C-w>",
+    "args": {
+      "commands": ["workbench.action.terminal.kill", "workbench.action.terminal.new"]
+    }
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.navigateLeft",
+    "when": "!editorTextFocus && vim.active && vim.use<C-w>"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.navigateRight",
+    "when": "!editorTextFocus && vim.active && vim.use<C-w>"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.navigateDown",
+    "when": "!editorTextFocus && vim.active && vim.use<C-w>"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.navigateUp",
+    "when": "!editorTextFocus && vim.active && vim.use<C-w>"
+  },
+
+  /**
+   * Menu navigation
+   */
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p"
   },
   {
     "key": "ctrl+n",
@@ -53,26 +94,14 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+k ctrl+k",
-    "command": "workbench.action.closeOtherEditors"
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
   },
   {
-    "key": "ctrl+alt+l",
-    "command": "workbench.action.focusNextGroup"
-  },
-  {
-    "key": "ctrl+alt+h",
-    "command": "workbench.action.focusPreviousGroup"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+h",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
   },
   {
     "key": "ctrl+n",
@@ -84,16 +113,10 @@
     "when": "codeActionMenuVisible",
     "command": "selectPrevCodeAction"
   },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "inQuickOpen"
-  },
+
+  /**
+   * Multi cursor
+   */
   {
     "key": "shift+8",
     "command": "editor.action.addSelectionToNextFindMatch",
@@ -104,96 +127,73 @@
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
-  {
-    "key": "ctrl+d",
-    "command": "scrollPageDown",
-    "when": "textInputFocus && vim.active"
-  },
-  {
-    "key": "ctrl+u",
-    "command": "scrollPageUp",
-    "when": "textInputFocus && vim.active"
-  },
+
+  /**
+   * Copilot
+   */
   {
     "key": "ctrl+enter",
-    "command": "-github.copilot.generate",
-    "when": "editorTextFocus && github.copilot.activated"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-    "when": "inFilesPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+shift+e",
-    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-    "when": "inFilesPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "ctrl+shift+e",
-    "command": "-workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "ctrl+shift+h",
-    "command": "workbench.action.moveEditorLeftInGroup"
-  },
-  {
-    "key": "ctrl+shift+pageup",
-    "command": "-workbench.action.moveEditorLeftInGroup"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.moveEditorRightInGroup"
-  },
-  {
-    "key": "ctrl+shift+pagedown",
-    "command": "-workbench.action.moveEditorRightInGroup"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.previousEditor",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+pageup",
-    "command": "-workbench.action.previousEditor"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.nextEditor",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+pagedown",
-    "command": "-workbench.action.nextEditor"
-  },
-  {
-    "key": "alt+\\",
     "command": "editor.action.inlineSuggest.hide",
     "when": "inlineSuggestionVisible"
   },
   {
-    "key": "ctrl+alt+\\",
-    "command": "github.copilot.generate",
-    "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
+    "key": "ctrl+enter",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "!inlineSuggestionVisible"
   },
   {
-    "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
+    "key": "ctrl+shift+enter",
+    "command": "editor.action.inlineSuggest.showNext",
+    "when": "inlineSuggestionVisible"
   },
   {
-    "key": "ctrl+r",
-    "command": "-workbench.action.reloadWindow",
-    "when": "isDevelopment"
+    "key": "ctrl+shift+enter",
+    "command": "-editor.action.insertLineBefore",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /**
+   * File explorer
+   * Ref: https://github.com/vscode-neovim/vscode-neovim#explorer-file-manipulation
+   */
+  {
+    "key": "/",
+    "command": "list.find",
+    "when": "listFocus && listSupportsFind"
   },
   {
-    "key": "ctrl+y",
-    "command": "-redo"
+    "key": "a",
+    "command": "workbench.files.action.createFileFromExplorer",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "workbench.files.action.createFolderFromExplorer",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
   }
 ]
