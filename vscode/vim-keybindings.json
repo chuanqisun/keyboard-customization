@@ -149,12 +149,12 @@
   {
     "key": "ctrl+enter",
     "command": "editor.action.inlineSuggest.hide",
-    "when": "inlineSuggestionVisible"
+    "when": "inlineSuggestionVisible && editorTextFocus"
   },
   {
     "key": "ctrl+enter",
     "command": "editor.action.inlineSuggest.trigger",
-    "when": "!inlineSuggestionVisible"
+    "when": "!inlineSuggestionVisible && editorTextFocus"
   },
   {
     "key": "ctrl+shift+enter",
