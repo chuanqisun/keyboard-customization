@@ -178,7 +178,7 @@
   {
     "key": "/",
     "command": "list.find",
-    "when": "listFocus && listSupportsFind"
+    "when": "listFocus && listSupportsFind && !inputFocus"
   },
   {
     "key": "a",
