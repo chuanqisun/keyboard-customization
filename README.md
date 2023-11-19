@@ -1,4 +1,4 @@
-# Keyboard Automation
-Scripts and Macros for repetitive tasks
+# Keyboard Customization
+Bindings, config, scripts, and macros for specific application.
 
-Coding specific keymap layouts available in [Leap Code](https://github.com/chuanqisun/leap-code)
+Generic keymap layouts available in [Leap Code](https://github.com/chuanqisun/leap-code)
