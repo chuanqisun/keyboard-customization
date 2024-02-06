@@ -27,22 +27,22 @@
     }
   },
   {
-    "key": "ctrl+shift+tab",
+    "key": "alt+h",
     "command": "workbench.action.previousPanelView",
     "when": "panelFocus"
   },
   {
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextPanelView",
-    "when": "panelFocus"
-  },
-  {
-    "key": "ctrl+shift+tab",
+    "key": "alt+h",
     "command": "workbench.action.previousEditor",
     "when": "!panelFocus"
   },
   {
-    "key": "ctrl+tab",
+    "key": "alt+l",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "alt+l",
     "command": "workbench.action.nextEditor",
     "when": "!panelFocus"
   },
@@ -52,30 +52,12 @@
     "when": "activeEditorGroupEmpty && vim.use<C-w>"
   },
   {
-    "key": "ctrl+w ctrl+q",
-    "command": "workbench.action.closeGroup",
-    "when": "activeEditorGroupEmpty && vim.use<C-w>"
-  },
-  {
     "key": "ctrl+w q",
     "command": "workbench.action.closeActiveEditor",
     "when": "!editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl && !terminalFocus && !activeEditorGroupEmpty"
   },
   {
-    "key": "ctrl+w ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "!editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl && !terminalFocus && !activeEditorGroupEmpty"
-  },
-  {
     "key": "ctrl+w q",
-    "command": "runCommands",
-    "when": "terminalFocus && vim.use<C-w>",
-    "args": {
-      "commands": ["workbench.action.terminal.kill", "workbench.action.terminal.new"]
-    }
-  },
-  {
-    "key": "ctrl+w ctrl+q",
     "command": "runCommands",
     "when": "terminalFocus && vim.use<C-w>",
     "args": {
