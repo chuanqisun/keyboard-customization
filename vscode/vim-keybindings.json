@@ -51,22 +51,22 @@
     "when": "terminalFocus && vim.use<C-w>"
   },
   {
-    "key": "alt+h",
+    "key": "ctrl+2",
     "command": "workbench.action.previousPanelView",
     "when": "panelFocus"
   },
   {
-    "key": "alt+h",
+    "key": "ctrl+2",
     "command": "workbench.action.previousEditor",
     "when": "!panelFocus"
   },
   {
-    "key": "alt+l",
+    "key": "ctrl+4",
     "command": "workbench.action.nextPanelView",
     "when": "panelFocus"
   },
   {
-    "key": "alt+l",
+    "key": "ctrl+4",
     "command": "workbench.action.nextEditor",
     "when": "!panelFocus"
   },
@@ -143,12 +143,7 @@
    * Multi cursor
    */
   {
-    "key": "shift+8",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
-  },
-  {
-    "key": "ctrl+shift+8",
+    "key": "ctrl+8",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
