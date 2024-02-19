@@ -51,22 +51,22 @@
     "when": "terminalFocus && vim.use<C-w>"
   },
   {
-    "key": "ctrl+3",
+    "key": "ctrl+2",
     "command": "workbench.action.previousPanelView",
     "when": "panelFocus"
   },
   {
-    "key": "ctrl+3",
+    "key": "ctrl+2",
     "command": "workbench.action.previousEditor",
     "when": "!panelFocus"
   },
   {
-    "key": "ctrl+4",
+    "key": "ctrl+3",
     "command": "workbench.action.nextPanelView",
     "when": "panelFocus"
   },
   {
-    "key": "ctrl+4",
+    "key": "ctrl+3",
     "command": "workbench.action.nextEditor",
     "when": "!panelFocus"
   },
