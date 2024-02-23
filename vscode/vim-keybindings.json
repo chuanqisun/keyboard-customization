@@ -143,9 +143,9 @@
    * Multi cursor
    */
   {
-    "key": "ctrl+8",
+    "key": "shift+8",
     "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
+    "when": "editorFocus && editorHasSelection"
   },
 
   /**
@@ -215,9 +215,5 @@
     "key": "d",
     "command": "deleteFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "ctrl+shift+8",
-    "command": "editor.action.addSelectionToPreviousFindMatch"
   }
 ]
