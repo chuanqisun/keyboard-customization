@@ -3,6 +3,10 @@
    * Global command
    */
   {
+    "key": "ctrl+k ctrl+v",
+    "command": "toggleVim"
+  },
+  {
     "key": "ctrl+shift+s",
     "command": "workbench.action.files.saveFiles"
   },
