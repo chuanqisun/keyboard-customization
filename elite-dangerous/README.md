@@ -1,2 +1,3 @@
 - Place into `C:\Users\USER_NAME\AppData\Local\Frontier Developments\Elite Dangerous\Options`
 - Captured for Elite Dangerous Horizon
+- Linux dir `/media/chusun/Data/games/steamapps/compatdata/359320/pfx/drive_c/users/steamuser/AppData/Local/Frontier Developments/Elite Dangerous/Options/Binding`
