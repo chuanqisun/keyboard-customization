@@ -108,6 +108,11 @@
     "command": "terminal.focus",
     "when": "!editorIsOpen"
   },
+  {
+    "key": "ctrl+l",
+    "command": "terminal.focus",
+    "when": "!terminalFocus"
+  },
 
   /**
    * Menu navigation
@@ -183,21 +188,6 @@
     "key": "ctrl+shift+i",
     "command": "inlineChat.start",
     "when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "inlineChat.startWithCurrentLine",
-    "when": "inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "inlineChat.startWithCurrentLine",
-    "when": "inlineChatHasProvider && inlineChatShowingHint && !editorReadonly && !inlineChatVisible"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "inlineChat.startWithCurrentLine",
-    "when": "editorFocus && github.copilot.chat.editor.enableLineTrigger && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
   },
   {
     "key": "ctrl+shift+i",
