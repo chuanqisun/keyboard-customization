@@ -31,7 +31,11 @@
     "key": "ctrl+k ctrl+k",
     "command": "runCommands",
     "args": {
-      "commands": ["workbench.action.closeEditorsInOtherGroups", "workbench.action.closeOtherEditors"]
+      "commands": [
+        "workbench.action.closeEditorsInOtherGroups",
+        "workbench.action.closeOtherEditors",
+        "workbench.action.files.setActiveEditorWriteableInSession"
+      ]
     }
   },
   {
