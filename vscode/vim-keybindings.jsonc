@@ -163,26 +163,39 @@
 
   /**
    * Copilot
+   * ref: https://github.com/VSCodeVim/Vim/issues/9459#issuecomment-2648156285
    */
   {
+    "key": "tab",
+    "command": "-extension.vim_tab"
+  },
+  {
     "key": "ctrl+enter",
-    "command": "editor.action.inlineSuggest.hide",
-    "when": "inlineSuggestionVisible && editorTextFocus"
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
   },
   {
     "key": "ctrl+enter",
     "command": "editor.action.inlineSuggest.trigger",
-    "when": "!inlineSuggestionVisible && editorTextFocus"
+    "when": "editorTextFocus && !inlineSuggestionVisible"
   },
   {
-    "key": "ctrl+shift+enter",
+    "key": "ctrl+enter",
     "command": "editor.action.inlineSuggest.showNext",
-    "when": "inlineSuggestionVisible"
+    "when": "editorTextFocus && inlineSuggestionVisible"
   },
   {
-    "key": "ctrl+shift+enter",
-    "command": "-editor.action.insertLineBefore",
-    "when": "editorTextFocus && !editorReadonly"
+    "key": "escape",
+    "command": "runCommands",
+    "when": "(inlineEditIsVisible || inlineSuggestionVisible)",
+    "args": {
+      "commands": ["editor.action.inlineSuggest.hide", "extension.vim_escape"]
+    }
+  },
+  {
+    "key": "ctrl+end",
+    "command": "editor.action.inlineSuggest.acceptNextLine",
+    "when": "editorTextFocus && inlineSuggestionVisible"
   },
   {
     "key": "ctrl+shift+i",
