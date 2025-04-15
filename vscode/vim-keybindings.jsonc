@@ -112,11 +112,6 @@
     "command": "terminal.focus",
     "when": "!editorIsOpen"
   },
-  {
-    "key": "ctrl+l",
-    "command": "terminal.focus",
-    "when": "!terminalFocus"
-  },
 
   /**
    * Menu navigation
