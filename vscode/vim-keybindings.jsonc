@@ -31,11 +31,7 @@
     "key": "ctrl+k ctrl+k",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "workbench.action.closeEditorsInOtherGroups",
-        "workbench.action.closeOtherEditors",
-        "workbench.action.files.setActiveEditorWriteableInSession"
-      ]
+      "commands": ["workbench.action.closeEditorsInOtherGroups", "workbench.action.closeOtherEditors"]
     }
   },
   {
@@ -157,7 +153,7 @@
   {
     "key": "shift+8",
     "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus && editorHasSelection"
+    "when": "editorTextFocus && editorHasSelection"
   },
 
   /**
