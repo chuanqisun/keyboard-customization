@@ -54,6 +54,7 @@
   "vim.leader": " ",
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
+  "vim.useSystemClipboard": true,
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none"
