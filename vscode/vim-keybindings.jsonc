@@ -50,11 +50,6 @@
   },
   {
     "key": "ctrl+q",
-    "command": "workbench.action.closeSidebar",
-    "when": "sideBarFocus"
-  },
-  {
-    "key": "ctrl+q",
     "command": "workbench.action.closeGroup",
     "when": "activeEditorGroupEmpty && multipleEditorGroups"
   },
@@ -204,23 +199,8 @@
   },
   {
     "key": "ctrl+shift+i",
-    "command": "inlineChat.start",
-    "when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
-  },
-  {
-    "key": "ctrl+shift+i",
     "command": "workbench.action.terminal.chat.start",
     "when": "terminalChatAgentRegistered && terminalFocusInAny && terminalHasBeenCreated || terminalChatAgentRegistered && terminalFocusInAny && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "workbench.action.chat.startVoiceChat",
-    "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "workbench.action.chat.stopListeningAndSubmit",
-    "when": "inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'view' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
   },
 
   /**
